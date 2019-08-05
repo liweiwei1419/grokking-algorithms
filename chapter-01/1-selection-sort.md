@@ -61,7 +61,7 @@
 
 Python 代码1：
 
-```python
+```eval-python
 def select_sort(nums):
     """
     选择排序，记录最小元素的索引，最后才交换位置

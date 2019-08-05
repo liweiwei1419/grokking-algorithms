@@ -1,0 +1,12 @@
+{
+	"plugins": [
+         "back-to-top-button",
+         "chapter-fold",
+         "code",
+         "prism",
+        "-highlight",
+        "katex",
+        "klipse"
+    ]
+
+}

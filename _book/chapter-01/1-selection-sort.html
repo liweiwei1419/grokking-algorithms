@@ -17,7 +17,23 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
                 
             
                 
@@ -309,42 +325,42 @@
 <p>&#x5C0F;&#x8D34;&#x58EB;&#xFF1A;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x4E0D;&#x9700;&#x8981;&#x8BB0;&#x4F4F;&#xFF0C;&#x7B49;&#x5230;&#x540E;&#x9762;&#x63A5;&#x89E6;&#x4E86;&#x201C;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x201D;&#x3001;&#x201C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x201D;&#x3001;&#x201C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x201D;&#x7B49;&#x5176;&#x5B83;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x4EE5;&#x540E;&#xFF0C;&#x518D;&#x4E0E;&#x201C;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x201D;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x5C31;&#x4E0D;&#x96BE;&#x7406;&#x89E3;&#x4E86;&#x3002;</p>
 <h2 id="&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;">&#x201C;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x201D;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;</h2>
 <p>Python &#x4EE3;&#x7801;1&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">select_sort</span><span class="hljs-params">(nums)</span>:</span>
-    <span class="hljs-string">&quot;&quot;&quot;
+<pre class="language-"><code class="lang-eval-python">def select_sort(nums):
+    &quot;&quot;&quot;
     &#x9009;&#x62E9;&#x6392;&#x5E8F;&#xFF0C;&#x8BB0;&#x5F55;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x6700;&#x540E;&#x624D;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;
     :param nums:
     :return:
-    &quot;&quot;&quot;</span>
+    &quot;&quot;&quot;
     l = len(nums)
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(l):
+    for i in range(l):
         min_index = i
-        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i + <span class="hljs-number">1</span>, l):
-            <span class="hljs-keyword">if</span> nums[j] &lt; nums[min_index]:
+        for j in range(i + 1, l):
+            if nums[j] &lt; nums[min_index]:
                 min_index = j
         swap(nums, i, min_index)
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">swap</span><span class="hljs-params">(nums, idx1, idx2)</span>:</span>
-    <span class="hljs-keyword">if</span> idx1 == idx2:
-        <span class="hljs-keyword">return</span>
+def swap(nums, idx1, idx2):
+    if idx1 == idx2:
+        return
     temp = nums[idx1]
     nums[idx1] = nums[idx2]
     nums[idx2] = temp
 </code></pre>
 <p>&#x8BF4;&#x660E;&#xFF1A;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5728; Python &#x4E2D;&#x6709;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F; Python &#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x4E2D;&#x662F;&#x6CA1;&#x6709;&#x7684;&#x3002;</p>
 <p>Python &#x4EE3;&#x7801;2&#xFF1A;&#x4E3B;&#x4F53;&#x90E8;&#x5206;&#x548C;&#x201C;Python &#x5B9E;&#x73B0;1&#x201D;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">select_sort</span><span class="hljs-params">(nums)</span>:</span>
-    <span class="hljs-string">&quot;&quot;&quot;
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">select_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
     &#x9009;&#x62E9;&#x6392;&#x5E8F;&#xFF0C;&#x8BB0;&#x5F55;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x6700;&#x540E;&#x624D;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;
     :param nums:
     :return:
     &quot;&quot;&quot;</span>
-    l = len(nums)
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(l):
-        min_index = i
-        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i + <span class="hljs-number">1</span>, l):
-            <span class="hljs-keyword">if</span> nums[j] &lt; nums[min_index]:
-                min_index = j
-        nums[i], nums[min_index] = nums[min_index], nums[i]
+    l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        min_index <span class="token operator">=</span> i
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>min_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                min_index <span class="token operator">=</span> j
+        nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>min_index<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>min_index<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
 </code></pre>
 <p>&#x8FD9;&#x5C31;&#x662F;&#x201C;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x201D;&#x7B97;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x4F60;&#x770B;&#x5230;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x589E;&#x52A0;&#x6253;&#x5370;&#x8F93;&#x51FA;&#xFF0C;&#x5E2E;&#x52A9;&#x4F60;&#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;&#xFF1A;</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/414598-7fe8315e9e4125f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x9009;&#x62E9;&#x6392;&#x5E8F;-3"></p>
@@ -362,20 +378,20 @@
 <h3 id="1&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;">1&#x3001;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;</h3>
 <p>&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x4E2D;&#x662F;&#x5E38;&#x89C1;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x4E14;&#x4E5F;&#x662F;&#x7A0B;&#x5F0F;&#x5316;&#x7684;&#xFF0C;&#x7279;&#x522B;&#x597D;&#x8BB0;&#x3002;&#x5148;&#x7ED9;&#x51FA; Java &#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x518D;&#x7ED9;&#x51FA; Python &#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x6700;&#x540E;&#x7ED9;&#x51FA;&#x201C;&#x4E0D;&#x662F;&#x4EBA;&#x7684;&#x5199;&#x6CD5;&#x201D;&#x3002;</p>
 <p>Java &#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code class="lang-java"><span class="hljs-keyword">int</span> temp = a;
-a = b;
-b = temp;
+<pre class="language-"><code class="lang-java"><span class="token keyword">int</span> temp <span class="token operator">=</span> a<span class="token punctuation">;</span>
+a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+b <span class="token operator">=</span> temp<span class="token punctuation">;</span>
 </code></pre>
 <p>&#x8BF4;&#x660E;&#xFF1A;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5176;&#x5B9E;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x8981;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x7ED9;&#x8981;&#x8BA9;&#x53D8;&#x91CF; a &#x628A;&#x4F4D;&#x7F6E;&#x8BA9;&#x51FA;&#x6765;&#xFF0C;&#x5373; <code>int temp = a</code>&#xFF0C;&#x7136;&#x540E;&#x628A;&#x53E6;&#x4E00;&#x4E2A;&#x53D8;&#x91CF; b  &#x7684;&#x503C;&#x590D;&#x5236;&#x7ED9; a&#xFF0C;&#x5373; <code>a = b</code>&#xFF0C;&#x6700;&#x540E;&#x628A;&#x4E4B;&#x524D; a &#x653E;&#x5728; temp &#x91CC;&#x7684;&#x503C;&#x8D4B;&#x7ED9; b&#x3002;&#x8FD9;&#x4E48;&#x8BF4;&#x6BD4;&#x8F83;&#x62D7;&#x53E3;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x6211;&#x6BCF;&#x6B21;&#x5199;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4E0D;&#x7528;&#x60F3;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x6709;&#x89C4;&#x5F8B;&#x53EF;&#x5FAA;&#xFF1A;<strong>&#x9996;&#x5148;&#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x53D8;&#x91CF; temp&#xFF0C;&#x8FD9;&#x662F;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x5F00;&#x59CB;&#x201C;&#x9996;&#x5C3E;&#x76F8;&#x63A5;&#x201D;&#x4E86;&#xFF0C;&#x4F60;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x8FD9;&#x4E2A;&#x7279;&#x70B9;&#xFF0C;&#x6700;&#x540E;&#x63A5;&#x56DE; temp</strong>&#xFF0C;&#x8BB0;&#x4F4F;&#x8FD9;&#x4E2A;&#x89C4;&#x5F8B;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x5728; Python &#x4E2D;&#x662F;&#x8FD9;&#x6837;&#x5199;&#x7684;&#xFF1A;</p>
 <p>Python &#x4EE3;&#x7801;1&#xFF1A;</p>
-<pre><code class="lang-python">temp = a
-a = b
-b = temp
+<pre class="language-"><code class="lang-python">temp <span class="token operator">=</span> a
+a <span class="token operator">=</span> b
+b <span class="token operator">=</span> temp
 </code></pre>
 <p>&#x4E0D;&#x8FC7;&#xFF0C;Python &#x662F;&#x4E00;&#x95E8;&#x795E;&#x5947;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x8BED;&#x6CD5;&#x7CD6;&#x3002;</p>
 <h4 id="&#x4F7F;&#x7528;-python-&#x4EE3;&#x7801;&#x8BED;&#x6CD5;&#x7CD6;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;">&#x4F7F;&#x7528; Python &#x4EE3;&#x7801;&#x8BED;&#x6CD5;&#x7CD6;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;</h4>
 <p>Python &#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code class="lang-python">a, b = b, a
+<pre class="language-"><code class="lang-python">a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a
 </code></pre>
 <p>&#x5C31;&#x53EF;&#x4EE5;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x4E0D;&#x59A8;&#x52A8;&#x624B;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;&#xFF1A;</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/414598-55eef4ebf291ef11.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x9009;&#x62E9;&#x6392;&#x5E8F;-4"></p>
@@ -392,8 +408,8 @@ b = temp
 <li>&#x5728; Python &#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x9B54;&#x6CD5;&#x51FD;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x5B83;&#x5373;&#x53EF;&#xFF1A;</li>
 </ul>
 <p>Python &#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__cmp__</span><span class="hljs-params">(self, other)</span>:</span>
-    <span class="hljs-keyword">pass</span>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">__cmp__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
 </code></pre>
 <p>&#x5B9A;&#x4E49;&#x8FD9;&#x4E2A;&#x9B54;&#x6CD5;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x96C6;&#x5408;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x4E86;&#x3002;</p>
 <ul>
@@ -411,7 +427,7 @@ b = temp
 <h3 id="&#x672C;&#x6587;&#x6E90;&#x4EE3;&#x7801;">&#x672C;&#x6587;&#x6E90;&#x4EE3;&#x7801;</h3>
 <p>Python&#xFF1A;<a href="https://github.com/liweiwei1419/Algorithms-Learning-Python/tree/master/sort" target="_blank">&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5939;</a>&#xFF0C;Java&#xFF1A;<a href="https://github.com/liweiwei1419/Algorithms-Learning-Java/blob/master/01-Selection-Sort/src/SelectSort.java" target="_blank">&#x4EE3;&#x7801;&#x6587;&#x4EF6;</a>&#x3002;</p>
 <p>&#xFF08;&#x672C;&#x8282;&#x5B8C;&#xFF09;</p>
-
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
                             
@@ -454,7 +470,7 @@ b = temp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.1 选择排序","level":"2.2","depth":1,"next":{"title":"1.2 插入排序","level":"2.3","depth":1,"path":"chapter-01/2-insert-sort.md","ref":"chapter-01/2-insert-sort.md","articles":[]},"previous":{"title":"引言","level":"2.1","depth":1,"path":"chapter-01/README.md","ref":"chapter-01/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-01/1-selection-sort.md","mtime":"2019-08-03T05:14:42.446Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-03T05:06:28.898Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.1 选择排序","level":"2.2","depth":1,"next":{"title":"1.2 插入排序","level":"2.3","depth":1,"path":"chapter-01/2-insert-sort.md","ref":"chapter-01/2-insert-sort.md","articles":[]},"previous":{"title":"引言","level":"2.1","depth":1,"path":"chapter-01/README.md","ref":"chapter-01/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","prism","-highlight","katex","klipse","livereload"],"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-01/1-selection-sort.md","mtime":"2019-08-03T08:57:57.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-03T09:15:27.691Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -462,6 +478,18 @@ b = temp
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
